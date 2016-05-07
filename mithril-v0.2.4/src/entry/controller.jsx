@@ -103,6 +103,7 @@ var Controller = {
     view: function(ctrl) {
         let rows = ctrl.data().map((d,i) => {
             let sel = d.id === ctrl.selected() ? 'danger':'';
+            console.log(d, i);
             return m.component(Row, {onclick:ctrl.select, onremove:ctrl.remove, key:d.id, label:d.label, id:d.id, styleClass:sel});
 // this doesn't work here return (<Row onclick={ctrl.select} onremove={ctrl.remove} key={d.id} label={d.label} id={d.id} styleClass={sel}></Row>);
         });

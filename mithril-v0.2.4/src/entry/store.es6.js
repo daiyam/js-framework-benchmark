@@ -36,7 +36,7 @@ var Store = {
         }
     },
     add: function() {
-        this.data = [].concat(this.data, this.buildData(1000));
+        this.data = [].concat(this.data, this.buildData(1));
         this.selected = undefined;
     },
     select: function(id) {
